@@ -23,12 +23,12 @@
 import Foundation
 
 public class JWTDecoderResult: NSObject {
-    public var result: [String : Any]?
-    public var error: NSError?
+    @objc public var result: [String : Any]?
+    @objc public var error: NSError?
 }
 
 public class CheggJWTDecoder: NSObject {
-    public static func decode(token: String) -> JWTDecoderResult {
+    @objc public static func decode(token: String) -> JWTDecoderResult {
         var jwt: JWT?
         let decoderResult = JWTDecoderResult()
         do {
