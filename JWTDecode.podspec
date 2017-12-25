@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/auth0/JWTDecode.swift"
   s.license          = 'MIT'
   s.author           = { "Auth0" => "support@auth0.com", "Hernan Zalazar" => "hernan@auth0.com", "Martin Walsh" => "martin.walsh@auth0.com" }
-  s.source           = { :git => "https://github.com/auth0/JWTDecode.swift.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/Alexs1987/JWTDecode.swift", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/auth0'
 
   s.ios.deployment_target = '8.0'

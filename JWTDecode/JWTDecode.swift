@@ -22,6 +22,26 @@
 
 import Foundation
 
+public class JWTDecoderResult: NSObject {
+    public var result: [String : Any]?
+    public var error: NSError?
+}
+
+public class CheggJWTDecoder: NSObject {
+    public static func decode(token: String) -> JWTDecoderResult {
+        var jwt: JWT?
+        let decoderResult = JWTDecoderResult()
+        do {
+            jwt = try JWTDecode.decode(jwt: token)
+        }
+        catch let error as NSError {
+            decoderResult.error = error
+        }
+        decoderResult.result = jwt?.body
+        return decoderResult
+    }
+}
+
 /**
  Decodes a JWT token into an object that holds the decoded body (along with token header and signature parts).
  If the token cannot be decoded a `NSError` will be thrown.
